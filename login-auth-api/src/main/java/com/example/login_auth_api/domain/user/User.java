@@ -16,6 +16,15 @@ public class User {
     private String name;
     private String email;
     private String passoword;
+    private String setor;
+
+    public String getSetor() {
+        return setor;
+    }
+
+    public void setSetor(String setor) {
+        this.setor = setor;
+    }
 
     public String getId() {
         return id;
