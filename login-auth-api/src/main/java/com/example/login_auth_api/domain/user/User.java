@@ -15,7 +15,7 @@ public class User {
     private String id;
     private String name;
     private String email;
-    private String passoword;
+    private String password;
     private String setor;
 
     public String getSetor() {
@@ -50,11 +50,11 @@ public class User {
         this.email = email;
     }
 
-    public String getPassoword() {
-        return passoword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPassoword(String passoword) {
-        this.passoword = passoword;
+    public void setPassword(String passoword) {
+        this.password = passoword;
     }
 }

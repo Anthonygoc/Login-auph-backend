@@ -36,7 +36,7 @@ public class AuthController {
 
         User user = this.repository.findByEmail(body.email()).orElseThrow(() -> new RuntimeException("User not found"));
 
-        if (passwordEncoder.matches(body.password(), user.getPassoword())){
+        if (passwordEncoder.matches(body.password(), user.getPassword())){
             String token = this.tokenService.generateToken(user);
             return ResponseEntity.ok(new ResponseDTO(user.getName(), token ));
 
@@ -53,7 +53,7 @@ public class AuthController {
 
         if (user.isEmpty()) {
             User newUser = new User();
-            newUser.setPassoword(passwordEncoder.encode(body.password()));
+            newUser.setPassword(passwordEncoder.encode(body.password()));
             newUser.setEmail(body.email());
             newUser.setName(body.name());
             newUser.setSetor(body.setor());
